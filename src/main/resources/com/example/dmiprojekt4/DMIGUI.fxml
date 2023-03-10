@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="676.0" prefWidth="859.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dmiprojekt4.DMIProjektController">
+   <children>
+      <Label layoutX="88.0" layoutY="82.0" text="Station">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="65.0" layoutY="552.0" text="Date/Time end">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="585.0" text="Date" />
+      <Label layoutX="29.0" layoutY="617.0" text="Time" />
+      <Label layoutX="62.0" layoutY="202.0" text="Weather Data">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="303.0" layoutY="26.0" text="DMI Weather Data">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="endTimeCB" layoutX="61.0" layoutY="615.0" prefWidth="150.0" />
+      <Label layoutX="65.0" layoutY="430.0" text="Date/Time start">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="465.0" text="Date" />
+      <Label layoutX="29.0" layoutY="498.0" text="Time" />
+      <ComboBox fx:id="startTimeCB" layoutX="61.0" layoutY="495.0" prefHeight="26.0" prefWidth="150.0" />
+      <Button layoutX="394.0" layoutY="587.0" mnemonicParsing="false" onAction="#showDailyData" text="Show Daily Data" />
+      <ComboBox fx:id="startDateCB" layoutX="61.0" layoutY="461.0" prefWidth="150.0" />
+      <ComboBox fx:id="endDateCB" layoutX="61.0" layoutY="581.0" prefWidth="150.0" />
+      <ComboBox fx:id="stationCB" layoutX="53.0" layoutY="121.0" prefWidth="150.0" />
+      <ComboBox fx:id="weatherDataCB" layoutX="53.0" layoutY="241.0" prefWidth="150.0" />
+      <AreaChart fx:id="areaChartDays" layoutX="263.0" layoutY="89.0" prefHeight="458.0" prefWidth="574.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </AreaChart>
+      <AreaChart fx:id="areaChartHours" layoutX="263.0" layoutY="90.0" prefHeight="457.0" prefWidth="574.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </AreaChart>
+      <Button layoutX="544.0" layoutY="587.0" mnemonicParsing="false" onAction="#showHourlyData" text="Show Hourly Data" />
+   </children>
+</AnchorPane>
